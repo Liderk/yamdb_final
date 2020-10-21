@@ -134,7 +134,8 @@ class ReviewViewSet(viewsets.ModelViewSet):
             permission_classes = [permissions.IsAuthenticated,
                                   IsModeratorPermission]
         elif self.action in ('update', 'partial_update'):
-            permission_classes = [permissions.IsAuthenticated, IsOwnerPermission]
+            permission_classes = [permissions.IsAuthenticated,
+                                  IsOwnerPermission]
         else:
             permission_classes = [permissions.IsAuthenticated]
         return [permission() for permission in permission_classes]
@@ -161,11 +162,12 @@ class CommentViewSet(viewsets.ModelViewSet):
             permission_classes = [permissions.AllowAny]
         elif self.action in ('destroy'):
             permission_classes = [permissions.IsAuthenticated,
-                                  IsModeratorPermission ]
+                                  IsModeratorPermission]
         elif self.action in ('update', 'partial_update'):
-            permission_classes = [permissions.IsAuthenticated, IsOwnerPermission]
+            permission_classes = [permissions.IsAuthenticated,
+                                  IsOwnerPermission]
         else:
-            permission_classes = [permissions.IsAuthenticated,]
+            permission_classes = [permissions.IsAuthenticated, ]
         return [permission() for permission in permission_classes]
 
     def destroy(self, request, title_id, review_id, pk=None):
