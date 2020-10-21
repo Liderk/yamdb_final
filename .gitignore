@@ -3,6 +3,9 @@ env/
 venv/
 .venv
 .venv/
+.yandb_f
+.yandb_f/
+yandb_f
 
 __pycache__/
 *.py[cod]
@@ -13,6 +16,8 @@ __pycache__/
 .LSOverride
 .vscode
 
+./api_yamdb/.env
+
 *.sublime-project
 *.sublime-workspace
 
@@ -20,3 +25,7 @@ static/
 posts/static/
 
 db.sqlite3
+
+api_yamdb/.env
+
+.gitignore
