@@ -24,7 +24,9 @@ jobs:
       run: flake8 --exclude tests,api_yamdb,api/migrations --ignore F841
 
     - name: Test with pytest
-      run: pytest tests.py
+      run: |
+        export SECRET_KEY=secrets.SECRET_KEY
+        pytest tests.py
 
   push_to_docker_hub:
     name: Push Docker image to Docker Hub
