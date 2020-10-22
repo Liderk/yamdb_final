@@ -52,7 +52,7 @@ jobs:
       - name: copy docker-compose.yaml to server
         run: |
           scp ./docker-compose.yaml ${{ secrets.USER }}@${{ secrets.HOST }}:/home/yc-user/app
-        with:
+        env:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
 #      - name: executing remote ssh commands to deploy
