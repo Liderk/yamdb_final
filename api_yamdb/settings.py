@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os, datetime
 import environ
 env = environ.Env()
-env.read_env(env.str('ENV_PATH', '/home/app/.env'))
+env.read_env(env.str('ENV_PATH', '/home/lid/.env'))
 #environ.Env.read_env() # импортируем  окружение
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
