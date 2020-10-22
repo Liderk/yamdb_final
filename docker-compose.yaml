@@ -11,7 +11,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     env_file:
-      - ./.env
+      - ./api_yamdb/.env
 
   web:
     image: liderk/yamdb_final:latest
@@ -24,7 +24,7 @@ services:
     depends_on:
       - db
     env_file:
-      - ./.env
+      - ./api_yamdb/.env
 
   nginx:
     build: ./nginx
