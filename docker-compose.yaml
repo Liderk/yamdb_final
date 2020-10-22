@@ -11,25 +11,25 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     env_file:
-      - api_yamdb/.env
+      - ./.env
 
   web:
     image: liderk/yamdb_final:latest
     restart: always
     command: sh -c "python manage.py migrate && gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000"
     volumes:
-      - static_volume:/home/app/yamdb/static
+      - static_volume:/code/static
     expose:
       - 8000
     depends_on:
       - db
     env_file:
-      - api_yamdb/.env
+      - ./.env
 
   nginx:
     build: ./nginx
     volumes:
-      - static_volume:/home/app/yamdb/static
+      - static_volume:/code/static
     ports:
       - 80:80
     depends_on:
