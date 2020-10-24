@@ -37,6 +37,9 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v2
 
+      - name: setting SECRET_KEY
+          export SECRET_KEY=secrets.SECRET_KEY
+
       - name: Push to Docker Hub
         uses: docker/build-push-action@v1
         with:
@@ -81,4 +84,4 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: ${{ github.workflow }} папка отправлена!!
+          message: ${{ github.workflow }} Проверка пройдена!!
