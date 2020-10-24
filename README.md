@@ -1,5 +1,4 @@
-# api_yamdb ![yamdb](https://github.com/Liderk/yamdb_final/workflows/CI/badge.svg)
-![yamdb](https://github.com/Liderk/yamdb_final/workflows/CI/badge.svg?branch=master&event=status)
+# api_yamdb ![yamdb workflow](https://github.com/Liderk/yamdb_final/workflows/yamdb%20workflow/badge.svg?branch=master)
 групповой проект по созданию REST-API для медиасервиса Yamdb собирающего отзывы пользователей на произведения: «Книги», «Фильмы», «Музыка».
 
 ### 1. Авторизации и роли
@@ -43,12 +42,3 @@
 4. Обновить информацию об объекте(Права доступа: Администратор)
 5. Удалить произведение(Права доступа: Администратор)
 
-## Запуск проекта
-##### Сборка образов и запуск контейнеров проекта
-sudo docker-compose up -d
-##### Создадим таблицы в БД
-sudo docker-compose exec web python manage.py migrate
-##### Перенесем данные в базу данных проекта
-sudo docker-compose exec web python manage.py loaddata fixtures.json
-##### При необходимости создаем администратора
-sudo docker-compose exec web python manage.py createsuperuser --email <EMAIL>
