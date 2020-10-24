@@ -73,7 +73,6 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             cd app
-            docker-compose down
             docker-compose up --build
 
 
