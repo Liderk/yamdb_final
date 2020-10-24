@@ -76,8 +76,6 @@ jobs:
             sudo docker-compose stop
             sudo docker-compose up --build -d
 
-
-
   send_message:
     runs-on: ubuntu-latest
     needs: deploy
