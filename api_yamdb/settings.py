@@ -13,8 +13,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os, datetime
 import environ
 env = environ.Env()
-env.read_env(env.str('ENV_PATH', '/home/yc-user/app.env'))
-#environ.Env.read_env() # импортируем  окружение
+# env.read_env(env.str('ENV_PATH', '/home/yc-user/app.env'))
+environ.Env.read_env() # импортируем  окружение
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',    
+    'rest_framework',
     'api',
 ]
 

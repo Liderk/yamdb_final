@@ -1,4 +1,4 @@
-# api_yamdb ![yamdb](https://github.com/Liderk/yamdb_final/workflows/CI/badge.svg) [yamdb workflow](https://github.com/Liderk/yamdb_final/workflows/yamdb%20workflow/badge.svg?branch=master)
+# api_yamdb ![yamdb](https://github.com/Liderk/yamdb_final/workflows/CI/badge.svg)  [yamdb workflow](https://github.com/Liderk/yamdb_final/workflows/yamdb%20workflow/badge.svg?branch=master)
 групповой проект по созданию REST-API для медиасервиса Yamdb собирающего отзывы пользователей на произведения: «Книги», «Фильмы», «Музыка».
 
 ### 1. Авторизации и роли
